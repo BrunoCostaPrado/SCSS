@@ -1,0 +1,12 @@
+@mixin flex-column {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 500px;
+}
+.p1{
+    @include flex-column;
+}
+
+p{
+    @include flex-column;
+}
