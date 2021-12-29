@@ -1,0 +1,27 @@
+
+$test:red;
+@mixin flex-column {
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+}
+.p1 {
+  @include flex-column;
+}
+
+.p2 {
+  @include flex-column;
+}
+.p3{
+  @include flex-column()
+}
+.h1{
+  @include flex-column()
+}
+.h2{
+  @include flex-column()
+}
+.h3
+{
+  @include flex-column()
+}
