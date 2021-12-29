@@ -1,3 +1,3 @@
 # SCSS
  
-Apree
+Repositorio para apreendizado sobre SASS/SCSS
