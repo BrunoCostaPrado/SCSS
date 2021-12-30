@@ -92,9 +92,28 @@ body {
 }
 .l1 {
   color: blue;
-  @include flex-column() ;
+  @include flex-column();
   a {
+    color: grey;
     font: size 20px;
+    @include border(10px);
+  }
+}
+.l2 {
+  color: bisque;
+  @include flex-column();
+  a {
+    color: aqua;
+    font-size: 10px;
+    @include border(10px);
+  }
+}
+.l3 {
+  color: bisque;
+  @include flex-column();
+  a {
+    color: gold;
+    font-size: 20px;
     @include border(10px);
   }
 }

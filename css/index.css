@@ -107,7 +107,32 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: large; }
   .l1 a {
+    color: grey;
     font: size 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
+
+.l2 {
+  color: bisque;
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large; }
+  .l2 a {
+    color: aqua;
+    font-size: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
+
+.l3 {
+  color: bisque;
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large; }
+  .l3 a {
+    color: gold;
+    font-size: 20px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px; }
