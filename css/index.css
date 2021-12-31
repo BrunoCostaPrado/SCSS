@@ -136,3 +136,28 @@ body {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px; }
+
+.circulo {
+  width: 500px;
+  height: 500px;
+  -webkit-border-radius: 250px;
+  -moz-border-radius: 250px;
+  border-radius: 250px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: blue;
+  display: block; }
+
+.triangulo {
+  width: 0;
+  height: 0;
+  border-left: 500px solid transparent;
+  border-right: 500px solid transparent;
+  border-bottom: 500px solid blue;
+  display: block; }
+
+.ir {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent; }
