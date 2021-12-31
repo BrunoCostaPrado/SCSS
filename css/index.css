@@ -105,7 +105,11 @@ body {
   color: blue;
   display: flex;
   font-family: "Times New Roman", Times, serif;
-  font-size: large; }
+  font-size: large;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: red; }
   .l1 a {
     color: grey;
     font: size 20px;
@@ -137,27 +141,29 @@ body {
     -moz-border-radius: 10px;
     border-radius: 10px; }
 
-.circulo {
-  width: 500px;
-  height: 500px;
-  -webkit-border-radius: 250px;
-  -moz-border-radius: 250px;
-  border-radius: 250px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  background-color: blue;
-  display: block; }
+ul.social-links li {
+  list-style: none; }
+  ul.social-links li a {
+    display: block;
+    float: left;
+    width: 65px;
+    height: 65px;
+    text-indent: -999px; }
 
-.triangulo {
-  width: 0;
-  height: 0;
-  border-left: 500px solid transparent;
-  border-right: 500px solid transparent;
-  border-bottom: 500px solid blue;
-  display: block; }
+.amumu {
+  background: url(../img/amumu.jpg) no-repeat; }
 
-.ir {
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent; }
+.amumu1 {
+  background: url(../img/amumu1.jpg) no-repeat; }
+
+.amumu2 {
+  background: url(../img/amumu2.jpg) no-repeat; }
+
+.amumu_2 {
+  background: url(../img/amumu_2.jpg) no-repeat; }
+
+.amumu3 {
+  background: url(../img/amumu3.jpg) no-repeat; }
+
+.amumu_turntable_img {
+  background: url(../img/amumu_turntable_img.jpg) no-repeat; }

@@ -11,6 +11,9 @@ $margin: 1.5%;
   height: 400px;
   width: 400px;
 }
+@mixin border {
+  border-radius: 50px;
+}
 .p1 {
   @include flex-column;
   color: aqua;
@@ -93,11 +96,13 @@ body {
 .l1 {
   color: blue;
   @include flex-column();
+  @include border();
   a {
     color: grey;
     font: size 20px;
     @include border(10px);
   }
+  background-color: red;
 }
 .l2 {
   color: bisque;
@@ -117,55 +122,20 @@ body {
     @include border(10px);
   }
 }
-@mixin circulo($width,$color) {
-  width: $width;
-  height: $width;
-  -webkit-border-radius: $width/2;
-  -moz-border-radius: $width/2;
-  border-radius: $width/2;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  background-color: $color;
-}
-@mixin triangulo($width, $dir,$color) {
-  @if $dir==up {
-    width: 0;
-    height: 0;
-    border-left: $width solid transparent;
-    border-right: $width solid transparent;
-    border-bottom: $width solid $color;
-  } @else if $dir== down {
-    width: 0;
-    height: 0;
-    border-left: $width solid transparent;
-    border-right: $width solid transparent;
-    border-top: $width solid $color;
-  }@else if $dir== r {
-    width: 0;
-    height: 0;
-    border-left: $width solid transparent;
-    border-bottom: $width solid transparent;
-    border-top: $width solid $color;
-  }
-  @else if $dir== l {
-    width: 0;
-    height: 0;
-    border-bottom: $width solid transparent;
-    border-right: $width solid transparent;
-    border-top: $width solid $color;
+ul.social-links li {
+  list-style: none;
+  a {
+    display: block;
+    float: left;
+    width: 65px;
+    height: 65px;
+    text-indent: -999px;
   }
 }
-.circulo {
-  @include circulo(500px,blue);
-  display: block;
-}
-.triangulo {
-  @include triangulo(500px, up,blue);
-  display: block;
-}
-.ir {
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
+
+$icons: (amumu, amumu1, amumu2, amumu_2, amumu3, amumu_turntable_img);
+@each $social in $icons {
+  .#{$social} {
+    background: url(../img/#{$social}.jpg) no-repeat;
+  }
 }

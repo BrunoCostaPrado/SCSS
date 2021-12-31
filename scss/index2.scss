@@ -1,0 +1,53 @@
+@mixin circulo($width,$color) {
+    width: $width;
+    height: $width;
+    -webkit-border-radius: $width/2;
+    -moz-border-radius: $width/2;
+    border-radius: $width/2;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: $color;
+  }
+  @mixin triangulo($width, $dir,$color) {
+    @if $dir==up {
+      width: 0;
+      height: 0;
+      border-left: $width solid transparent;
+      border-right: $width solid transparent;
+      border-bottom: $width solid $color;
+    } @else if $dir== down {
+      width: 0;
+      height: 0;
+      border-left: $width solid transparent;
+      border-right: $width solid transparent;
+      border-top: $width solid $color;
+    }@else if $dir== r {
+      width: 0;
+      height: 0;
+      border-left: $width solid transparent;
+      border-bottom: $width solid transparent;
+      border-top: $width solid $color;
+    }
+    @else if $dir== l {
+      width: 0;
+      height: 0;
+      border-bottom: $width solid transparent;
+      border-right: $width solid transparent;
+      border-top: $width solid $color;
+    }
+  }
+  .circulo {
+    @include circulo(500px,blue);
+    display: block;
+  }
+  .triangulo {
+    @include triangulo(500px, up,blue);
+    display: block;
+  }
+  .ir {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+  }
+  
