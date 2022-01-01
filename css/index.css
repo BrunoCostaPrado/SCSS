@@ -150,20 +150,20 @@ ul.social-links li {
     height: 65px;
     text-indent: -999px; }
 
-.amumu {
-  background: url(../img/amumu.jpg) no-repeat; }
+.html5 {
+  background: url(../img/html5.svg) no-repeat; }
 
-.amumu1 {
-  background: url(../img/amumu1.jpg) no-repeat; }
+.css3 {
+  background: url(../img/css3.svg) no-repeat; }
 
-.amumu2 {
-  background: url(../img/amumu2.jpg) no-repeat; }
+.sass {
+  background: url(../img/sass.svg) no-repeat; }
 
-.amumu_2 {
-  background: url(../img/amumu_2.jpg) no-repeat; }
+.vscode {
+  background: url(../img/vscode.svg) no-repeat; }
 
-.amumu3 {
-  background: url(../img/amumu3.jpg) no-repeat; }
+.docker {
+  background: url(../img/docker.svg) no-repeat; }
 
-.amumu_turntable_img {
-  background: url(../img/amumu_turntable_img.jpg) no-repeat; }
+.npm {
+  background: url(../img/npm.svg) no-repeat; }

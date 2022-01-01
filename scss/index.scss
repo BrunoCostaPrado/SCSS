@@ -133,9 +133,11 @@ ul.social-links li {
   }
 }
 
-$icons: (amumu, amumu1, amumu2, amumu_2, amumu3, amumu_turntable_img);
+$icons: (html5, css3, sass, vscode, docker, npm);
 @each $social in $icons {
   .#{$social} {
-    background: url(../img/#{$social}.jpg) no-repeat;
+    background: url(../img/#{$social}.svg) no-repeat;
+    // width: 300px;
+    // height: 300px;
   }
 }
