@@ -11,8 +11,10 @@ $margin: 1.5%;
   height: 400px;
   width: 400px;
 }
-@mixin border {
-  border-radius: 50px;
+@mixin border($radius: 20px) {
+  -web-kit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
 }
 .p1 {
   @include flex-column;
@@ -55,28 +57,6 @@ $margin: 1.5%;
 }
 .i5 {
   @include img();
-}
-
-.pp {
-  font-size: small;
-  font-family: Arial, Helvetica, sans-serif;
-  color: firebrick;
-}
-.pp2 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: large;
-  color: salmon;
-}
-.pp1 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: medium;
-  color: cyan;
-}
-.pp3 {
-  font-size: smaller;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: pink;
 }
 
 h1 {
@@ -122,6 +102,25 @@ body {
     @include border(10px);
   }
 }
+$cream:#555;
+$cream2:#666;
+.grad {
+  @include border();
+  padding: 1%;
+  background-color: $cream;
+  background-color: -webkit-gradient(linear,left,top,left,bottom,from($cream),to($cream2) );
+  background-image: -webkit-linear-gradient(top,$cream,$cream2) ;
+  background-image:   -moz-linear-gradient(top,$cream,$cream2);
+  background-image:     ms-linear-gradient(top,$cream,$cream2);
+  background-image:       -o-linear-gradient(top,$cream,$cream2);
+  .intro {
+    background: rgba(#333, 0.5);
+    @include border;
+    width: percentage(550px/ 1440px);
+  }
+  .feature{@extend .intro;border: 1px solid yellow;
+    width: percentage(890px/ 144px);}
+}
 ul.social-links li {
   list-style: none;
   a {
@@ -137,7 +136,12 @@ $icons: (html5, css3, sass, vscode, docker, npm);
 @each $social in $icons {
   .#{$social} {
     background: url(../img/#{$social}.svg) no-repeat;
-    // width: 300px;
-    // height: 300px;
+  }
+}
+// nth(10px 20px 30px,1)=>10px
+// nth((Helvetica,Arial,sans-serif),3)=>sans-serif
+@each $p in (um black, dois black + 20, tres black + 40, quatro black + 60) {
+  .#{nth($p,1)} {
+    background: #{nth($p, 2)};
   }
 }

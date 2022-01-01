@@ -72,26 +72,6 @@
   height: 400px;
   width: 400px; }
 
-.pp {
-  font-size: small;
-  font-family: Arial, Helvetica, sans-serif;
-  color: firebrick; }
-
-.pp2 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: large;
-  color: salmon; }
-
-.pp1 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: medium;
-  color: cyan; }
-
-.pp3 {
-  font-size: smaller;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: pink; }
-
 h1 {
   margin: 20px 0 1.5%; }
 
@@ -141,6 +121,27 @@ body {
     -moz-border-radius: 10px;
     border-radius: 10px; }
 
+.grad {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding: 1%;
+  background-color: #555;
+  background-color: -webkit-gradient(linear, left, top, left, bottom, from(#555), to(#666));
+  background-image: -webkit-linear-gradient(top, #555, #666);
+  background-image: -moz-linear-gradient(top, #555, #666);
+  background-image: ms-linear-gradient(top, #555, #666);
+  background-image: -o-linear-gradient(top, #555, #666); }
+  .grad .intro, .grad .feature {
+    background: rgba(51, 51, 51, 0.5);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    width: 38.19444%; }
+  .grad .feature {
+    border: 1px solid yellow;
+    width: 618.05556%; }
+
 ul.social-links li {
   list-style: none; }
   ul.social-links li a {
@@ -167,3 +168,15 @@ ul.social-links li {
 
 .npm {
   background: url(../img/npm.svg) no-repeat; }
+
+.um {
+  background: black; }
+
+.dois {
+  background: #141414; }
+
+.tres {
+  background: #282828; }
+
+.quatro {
+  background: #3c3c3c; }
