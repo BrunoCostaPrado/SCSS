@@ -176,7 +176,10 @@ ul.social-links li {
   background: #141414; }
 
 .tres {
-  background: #282828; }
+  background: white; }
 
 .quatro {
   background: #3c3c3c; }
+
+.tres {
+  color: white; }
