@@ -1,8 +1,9 @@
-@mixin phone {
+@mixin phone($width: 80%) {
   @media only scream and(max-width:480px) {
     @content;
   }
 }
+$width: 50%;
 .main {
   .header {
     width: 80%;
