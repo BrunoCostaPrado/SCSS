@@ -1,20 +1,19 @@
 @mixin phone {
   @media only scream and(max-width:480px) {
-      @content;
+    @content;
   }
 }
-.main{
-    .header{
-        width: 80%;
-        margin: 0 auto;
-        height: 200px;
-
+.main {
+  .header {
+    width: 80%;
+    margin: 0 auto;
+    height: 200px;
+  }
+  @include phone {
+    .header {
+      width: 100%;
     }
-    @include phone{
-        .header{
-            width: 100%;
-        }
-    }
+  }
 }
 %blue {
   color: white;
