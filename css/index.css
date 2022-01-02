@@ -1,3 +1,6 @@
+body {
+  background: #262626; }
+
 .p1 {
   display: flex;
   font-family: "Times New Roman", Times, serif;
@@ -169,17 +172,22 @@ ul.social-links li {
 .npm {
   background: url(../img/npm.svg) no-repeat; }
 
-.um {
-  background: black; }
-
-.dois {
-  background: #141414; }
-
-.tres {
-  background: white; }
-
-.quatro {
-  background: #3c3c3c; }
-
-.tres {
+.par-1 {
+  margin-left: 100px;
+  background: black;
   color: white; }
+
+.par-2 {
+  margin-left: 200px;
+  background: #404040;
+  color: white; }
+
+.par-3 {
+  margin-left: 300px;
+  background: gray;
+  color: black; }
+
+.par-4 {
+  margin-left: 400px;
+  background: #bfbfbf;
+  color: black; }

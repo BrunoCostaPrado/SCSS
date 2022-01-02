@@ -16,6 +16,9 @@ $margin: 1.5%;
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
+body{
+  background: #262626;
+}
 .p1 {
   @include flex-column;
   color: aqua;
@@ -140,20 +143,33 @@ $icons: (html5, css3, sass, vscode, docker, npm);
 }
 // nth(10px 20px 30px,1)=>10px
 // nth((Helvetica,Arial,sans-serif),3)=>sans-serif
-@each $p in (um black, dois black + 20, tres white, quatro black + 60) {
-  .#{nth($p,1)} {
-    background: #{nth($p, 2)};
-  }
-}
+// @each $p in (um black, dois black, tres black+40, quatro black + 60) {
+//   .#{nth($p,1)} {
+//     background: #{nth($p, 2)};
+//      color:contraste-testo(nth($p,2)); 
+//   }
+// }
 @function  contraste-testo($fundo){
-@return lighten($fundo,70%);
-@if lighten($fundo)<50% { 
-  @return lighten($fundo,70%);
+@if lightness($fundo)<50% { 
+  @return white;
 } @else {
-  @return darken($fundo,90%)
+  @return black;
 }
-
 }
-.tres{
-  color: contraste-testo(white );
+// @for $i from 1 through 4 {
+//   .par-#{$i}
+//   {
+//     margin-right: 20px*$i;
+//   }
+//  }
+$i:1;
+$parbg:black;
+@while $i< 5 {
+.par-#{$i}{
+  margin-left: 100px*$i; 
+  background: $parbg;
+  color: contraste-testo($parbg);
+}
+$parbg:lighten($parbg,25%);   
+$i:$i+1;
 }
